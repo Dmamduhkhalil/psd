@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن | شركة برمجة وتسويق رقمي</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="logo">PSD</div>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="services.html">خدماتنا</a>
+            <a href="contact.html">اتصل بنا</a>
+        </nav>
+        <a href="contact.html" class="login-button">اتصل بنا </a>
+    </header>
+
+    <!-- About Us Section -->
+    <div style="height: 50px;"></div>
+    <section class="about">
+        <div class="container">
+            <h2>من نحن</h2>
+            <p>نحن شركة متخصصة في <strong>البرمجة والتسويق الرقمي</strong>، نقدم حلولًا مبتكرة لمساعدة الشركات على النمو وتحقيق أهدافها الرقمية. نمتلك فريقًا من الخبراء في تطوير مواقع الويب، تطبيقات الهاتف، وتحسين محركات البحث (SEO)، بالإضافة إلى التسويق عبر وسائل التواصل الاجتماعي.</p>
+
+            <h3>مهمتنا</h3>
+            <p>مهمتنا هي تمكين الشركات من الاستفادة من التقنيات الحديثة لتوسيع أعمالها وتحقيق النجاح في العالم الرقمي.</p>
+
+            <h3>رؤيتنا</h3>
+            <p>أن نكون الشركة الرائدة في تقديم الحلول البرمجية والتسويقية الأكثر ابتكارًا وفعالية.</p>
+
+            <h3>لماذا تختارنا؟</h3>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> خبرة واسعة في البرمجة والتسويق الرقمي.</li>
+                <li><i class="fas fa-check-circle"></i> فريق محترف ومبدع.</li>
+                <li><i class="fas fa-check-circle"></i> حلول مخصصة تناسب احتياجات كل عميل.</li>
+                <li><i class="fas fa-check-circle"></i> دعم فني متواصل.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 PSD Digital Solutions. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        // JavaScript for Header Scroll Effect
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // JavaScript for Animated Counter
+        const counters = document.querySelectorAll('.stat-item span');
+        const speed = 200; // Animation speed
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-count');
+                const count = +counter.innerText;
+
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            updateCount();
+        });
+    </script>
+
+</body>
+</html>
